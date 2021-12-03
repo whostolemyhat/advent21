@@ -14,3 +14,8 @@ pub fn get_input(filename: &str) -> Vec<i32> {
   let lines = read_lines(filename).expect("Somehow failed to open the file");
   lines.map(|line| line.unwrap().parse().unwrap()).collect()
 }
+
+pub fn get_lines(filename: &str) -> Vec<String> {
+  let lines = read_lines(filename).expect("No file");
+  lines.map(|line| line.unwrap()).collect()
+}
